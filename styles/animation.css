@@ -1,0 +1,44 @@
+/*al cargar las tareas se despliegan hacia abajo*/
+@keyframes down {
+    0% { 
+        transform: translateY(-2em);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
+
+.animar-entrada{
+    animation-name: down;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-duration: 300ms;
+}
+
+/*estilos para el skeleton*/
+@keyframes loadingTask {
+
+    0% { transform: scaleX(0); }
+    100% { transform: scaleX(1); }
+}
+
+.tarea.loading .descripcion .nombre,
+.tarea.loading .descripcion .timestamp{
+    display: block;
+    height: 1em;
+    width: 30em;
+    background-color: rgb(216, 216, 216);
+    transform-origin: 0 0; /*coordenadas del cuadrado para decir donde arrancar la animacion*/
+
+    animation-name: loadingTask;
+    animation-iteration-count: infinite;
+    animation-duration: 2500ms;
+    
+}
+
+.tarea.loading .descripcion .timestamp{
+    width: 10em;
+}

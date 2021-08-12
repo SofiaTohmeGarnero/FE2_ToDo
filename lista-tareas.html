@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./styles/animation.css">
+  <link rel="stylesheet" href="./styles/lista-tareas.css">
+  <script src="./js/lista-tareas.js"></script>
+  <title>ToDo</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="#">My ToDo's</a>
+    </nav>
+
+    <div class="user-info">
+      <p>username</p>
+      <div class="user-image"></div>
+    </div>
+  </header>
+
+
+  <form id = "agregarTarea" class="nueva-tarea">
+    <div class="not-done "></div>
+    <input type="text" name = "descripcionTareaNueva" placeholder="Nueva tarea">
+    <button>
+      <img src="./assets/plus.png" alt="Agregar Tarea">
+    </button>
+  </form>
+
+
+  <ul class="tareas-pendientes">
+    <!--plantilla del skeleton-->
+    <li class="tarea loading">
+      <div class="not-done"></div>
+        <div class="descripcion">
+          <p class="nombre"></p>
+          <div class="right-description">
+            <p class="timestamp"></p>
+            <button ></button>
+          </div>
+      </div>
+    </li>
+  </ul>
+
+  <h2 class="titulo-terminadas">Tareas terminadas</h2>
+  <ul class="tareas-terminadas">
+    <!--plantilla del skeleton-->
+    <li class="tarea loading">
+      <div class="not-done"></div>
+        <div class="descripcion">
+          <p class="nombre"></p>
+          <div class="right-description">
+            <p class="timestamp"></p>
+            <button ></button>
+          </div>
+      </div>
+    </li>
+  </ul>
+
+</body>
+</html>
